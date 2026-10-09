@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10261f">
+  <meta name="description" content="Crea una propuesta general de rutina de gimnasio según tus objetivos, experiencia y disponibilidad.">
+  <title>Ritmo · Mi rutina</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#inicio" aria-label="Ritmo, inicio"><span class="brand-mark">R</span><span>ritmo<span class="dot">.</span></span></a><span class="top-label">ENTRENA A TU RITMO</span></header>
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span class="pulse"></span> TU PLAN, PASO A PASO</p><h1>Haz espacio<br>para <em>sentirte bien.</em></h1><p class="intro">Cuéntanos qué buscas y cuánto tiempo tienes. Recibirás una propuesta general para empezar con calma.</p></div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="ring ring-one"></div><div class="ring ring-two"></div><div class="art-label">MOVE<br>WITH<br>INTENTION</div><span class="spark">✳</span></div>
+    </section>
+
+    <section class="planner" aria-labelledby="form-title">
+      <div class="section-heading"><div><p class="eyebrow">01 — CUÉNTANOS DE TI</p><h2 id="form-title">Tu punto de partida</h2></div><span class="step-count">01 <i>/</i> 02</span></div>
+      <p class="section-note">Estos datos ayudan a dar contexto. No bastan para determinar por sí solos qué ejercicio es seguro para ti.</p>
+      <form id="routine-form">
+        <div class="field-grid">
+          <label class="field"><span>Edad <small>(años)</small></span><input name="age" type="number" min="13" max="100" inputmode="numeric" placeholder="Ej. 24" required><span class="field-hint">Si eres menor de 18, entrena con orientación de un adulto.</span></label>
+          <label class="field"><span>Peso <small>(kg)</small></span><input name="weight" type="number" min="25" max="300" step="0.1" inputmode="decimal" placeholder="Ej. 68" required></label>
+          <label class="field"><span>Estatura <small>(cm)</small></span><input name="height" type="number" min="100" max="230" inputmode="numeric" placeholder="Ej. 170" required></label>
+          <label class="field"><span>¿Qué quieres lograr?</span><select name="goal" required><option value="" disabled selected>Elige un objetivo</option><option value="fuerza">Ganar fuerza y confianza</option><option value="energia">Mejorar condición y energía</option><option value="habito">Crear el hábito de entrenar</option><option value="movilidad">Moverme con más movilidad</option></select></label>
+          <label class="field"><span>Experiencia entrenando</span><select name="level" required><option value="" disabled selected>Elige tu experiencia</option><option value="beginner">Estoy empezando / regreso</option><option value="regular">Entreno de vez en cuando</option><option value="experienced">Entreno con regularidad</option></select></label>
+          <label class="field"><span>Días disponibles por semana</span><select name="days" required><option value="" disabled selected>Elige cuántos días</option><option value="2">2 días</option><option value="3">3 días</option><option value="4">4 días</option></select></label>
+        </div>
+        <div class="safety-box"><span class="safety-icon">＋</span><p><strong>Antes de empezar</strong><br>¿Tienes una lesión, dolor persistente, condición médica o una indicación profesional que debamos considerar?</p><label class="checkline"><input name="health" type="checkbox"><span>Sí, necesito adaptar el ejercicio</span></label></div>
+        <div class="form-actions"><p>Tu información se usa solo en esta pantalla y no se envía a ningún servidor.</p><button class="button primary" type="submit">Crear mi propuesta <span aria-hidden="true">↗</span></button></div>
+      </form>
+    </section>
+    <section id="results" class="results" hidden aria-live="polite"></section>
+    <footer><span>RITMO · MUÉVETE CON INTENCIÓN</span><a href="#seguridad">Seguridad y uso</a></footer>
+    <p class="owner-credit">Aplicación creada por <strong>Pablo Orendain</strong></p>
+    <section id="seguridad" class="legal"><p><strong>Uso responsable.</strong> Ritmo ofrece ideas generales, no una evaluación médica ni un plan clínico individual. Si marcaste que necesitas adaptar el ejercicio, consulta a un profesional de salud antes de empezar. Detente ante dolor, mareo, falta de aire inusual o malestar. Elige cargas cómodas, prioriza la técnica y aumenta gradualmente. No se recomiendan dietas extremas, entrenar con dolor ni buscar cambios rápidos de peso.</p></section>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
